@@ -154,7 +154,7 @@ const ComingSoon = () => {
               <Sparkles className="h-3.5 w-3.5" />
               Launching Soon
             </span>
-            <h1 className="mt-5 text-4xl md:text-6xl font-bold leading-tight">
+            <h1 className="mt-5 text-4xl md:text-6xl font-bold leading-tight text-white">
               Website Launching Soon
             </h1>
             <p className="mt-4 text-lg md:text-xl text-primary-foreground/90">
