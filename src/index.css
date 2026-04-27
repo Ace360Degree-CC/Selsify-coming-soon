@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Brand */
+    --background: 0 0% 100%;
+    --foreground: 215 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    /* Deep Blue primary */
+    --primary: 205 79% 20%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 205 79% 15%;
+
+    /* Green secondary (CTA) */
+    --secondary: 145 63% 49%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-hover: 145 63% 42%;
+
+    /* Orange accent */
+    --accent: 28 90% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 15% 45%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 25% 90%;
+    --input: 214 25% 90%;
+    --ring: 205 79% 20%;
+
+    --radius: 0.5rem;
+
+    /* WhatsApp */
+    --whatsapp: 142 70% 45%;
+    --whatsapp-foreground: 0 0% 100%;
+
+    /* Surfaces */
+    --surface-soft: 210 30% 98%;
+    --surface-blue: 205 79% 20%;
+
+    --shadow-card: 0 4px 16px -4px hsl(205 50% 20% / 0.08);
+    --shadow-elevated: 0 12px 32px -8px hsl(205 50% 20% / 0.18);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 215 30% 8%;
+    --foreground: 0 0% 98%;
+    --card: 215 30% 10%;
+    --card-foreground: 0 0% 98%;
+    --popover: 215 30% 10%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 205 79% 55%;
+    --primary-foreground: 215 30% 8%;
+    --secondary: 145 63% 49%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 215 25% 18%;
+    --muted-foreground: 215 15% 65%;
+    --accent: 28 90% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 215 25% 20%;
+    --input: 215 25% 20%;
+    --ring: 205 79% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "cv11", "ss01";
+  }
+  h1, h2, h3, h4 {
+    @apply font-semibold tracking-tight text-primary;
+  }
+}
+
+@layer components {
+  .container-px {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+  .section {
+    @apply py-14 md:py-20;
+  }
+  .eyebrow {
+    @apply inline-block text-xs font-semibold uppercase tracking-[0.18em] text-accent;
+  }
+  .nav-link {
+    @apply relative text-sm font-medium text-foreground/80 hover:text-primary transition-colors;
+  }
+  .nav-link::after {
+    content: "";
+    @apply absolute left-0 -bottom-1 h-[2px] w-0 bg-accent transition-all duration-300;
+  }
+  .nav-link:hover::after { @apply w-full; }
+  .card-lift {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-elevated;
+  }
+}
+
+@layer utilities {
+  .text-shine {
+    background: linear-gradient(90deg, hsl(var(--accent)) 0%, hsl(var(--secondary)) 50%, hsl(var(--accent)) 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shine 3s linear infinite;
+  }
+}

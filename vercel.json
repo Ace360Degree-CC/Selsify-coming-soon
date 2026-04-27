@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "/coming-soon",
+      "permanent": false
+    }
+  ]
+}
