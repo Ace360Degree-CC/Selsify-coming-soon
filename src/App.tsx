@@ -32,44 +32,53 @@ import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/coming-soon" element={<ComingSoonPage />} />
-          <Route path="/solar-solutions" element={<SolarSolutions />} />
-          <Route path="/solar-solutions/on-grid" element={<OnGridSolar />} />
-          <Route path="/solar-solutions/off-grid" element={<OffGridSolar />} />
-          <Route path="/solar-solutions/hybrid" element={<HybridSolar />} />
-          <Route path="/solar-solutions/home" element={<SolarForHome />} />
-          <Route path="/solar-solutions/society" element={<SolarForSociety />} />
-          <Route path="/solar-solutions/commercial" element={<SolarForCommercial />} />
-          <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/franchise" element={<Franchise />} />
-          <Route path="/franchise/maharashtra" element={<FranchiseMaharashtra />} />
-          <Route path="/franchise/india" element={<FranchiseIndia />} />
-          <Route path="/solar-installation/mumbai" element={<SolarMumbai />} />
-          <Route path="/solar-installation/pune" element={<SolarPune />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/solar-panel-price-india" element={<BlogSolarPriceIndia />} />
-          <Route path="/blog/5kw-solar-system-cost-india" element={<Blog5kwSolarCost />} />
-          <Route path="/blog/on-grid-vs-off-grid-solar" element={<BlogOnGridVsOffGrid />} />
-          <Route path="/blog/is-solar-worth-it-india" element={<BlogIsSolarWorthIt />} />
-          <Route path="/solar-subsidy-india" element={<SolarSubsidy />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/terms-conditions" element={<TermsConditions />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
-
+// const App = () => (
+//   <QueryClientProvider client={queryClient}>
+//     <TooltipProvider>
+//       <Toaster />
+//       <Sonner />
+//       <BrowserRouter>
+//         <Routes>
+//           <Route path="/" element={<Index />} />
+//           <Route path="/coming-soon" element={<ComingSoonPage />} />
+//           <Route path="/solar-solutions" element={<SolarSolutions />} />
+//           <Route path="/solar-solutions/on-grid" element={<OnGridSolar />} />
+//           <Route path="/solar-solutions/off-grid" element={<OffGridSolar />} />
+//           <Route path="/solar-solutions/hybrid" element={<HybridSolar />} />
+//           <Route path="/solar-solutions/home" element={<SolarForHome />} />
+//           <Route path="/solar-solutions/society" element={<SolarForSociety />} />
+//           <Route path="/solar-solutions/commercial" element={<SolarForCommercial />} />
+//           <Route path="/projects" element={<ProjectsPage />} />
+//           <Route path="/franchise" element={<Franchise />} />
+//           <Route path="/franchise/maharashtra" element={<FranchiseMaharashtra />} />
+//           <Route path="/franchise/india" element={<FranchiseIndia />} />
+//           <Route path="/solar-installation/mumbai" element={<SolarMumbai />} />
+//           <Route path="/solar-installation/pune" element={<SolarPune />} />
+//           <Route path="/blog" element={<Blog />} />
+//           <Route path="/blog/solar-panel-price-india" element={<BlogSolarPriceIndia />} />
+//           <Route path="/blog/5kw-solar-system-cost-india" element={<Blog5kwSolarCost />} />
+//           <Route path="/blog/on-grid-vs-off-grid-solar" element={<BlogOnGridVsOffGrid />} />
+//           <Route path="/blog/is-solar-worth-it-india" element={<BlogIsSolarWorthIt />} />
+//           <Route path="/solar-subsidy-india" element={<SolarSubsidy />} />
+//           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+//           <Route path="/terms-conditions" element={<TermsConditions />} />
+//           <Route path="/about" element={<About />} />
+//           <Route path="/contact" element={<Contact />} />
+//           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+//           <Route path="*" element={<NotFound />} />
+//         </Routes>
+//       </BrowserRouter>
+//     </TooltipProvider>
+//   </QueryClientProvider>
+// );
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/coming-soon" element={<ComingSoonPage />} />
+        <Route path="/" element={<ComingSoonPage />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
 export default App;
